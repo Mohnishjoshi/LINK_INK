@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>Post Details</h2>
+    <div class="post">
+        <h3>@<%= post.username %></h3>
+        <p><%= post.content %></p>
+        <a href="/posts/<%= post.id %>/edit" class="button">Edit</a>
+        <form method="POST" action="/posts/<%= post.id %>/delete" class="inline-form">
+            <button type="submit" class="button">Delete</button>
+        </form>
+        
+        <br><br>
+        <a href="/posts" class="button">Back to All Posts</a>
+    </div>
+</body>
+</html>
+
+

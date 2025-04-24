@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2, h6 {
+    padding: 20px 0;
+    background: #6c63ff;
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    gap: 20px;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.username {
+    margin: 0;
+    font-weight: bold;
+    color: #6c63ff;
+    font-size: 1.2rem;
+}
+
+.content {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 8px;
+}
+/* Inline form to remove spacing/boxy appearance */
+.inline-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+/* Button Link */
+a.button, .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover, .button:hover {
+    background-color: #574fd6;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #ff4d4d;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #e63946;
+}
+
+/* Form Styles */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #574fd6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .posts-container {
+        padding: 20px;
+    }
+
+    .post-card {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+

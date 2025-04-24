@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>LinkLink
+        <h6>"Link your words. Ink your thoughts."</h6></h1>
+
+    <div class="posts-container">
+        <% for (let post of posts) { %>
+            <div class="post-card">
+                <h3 class="username">@ <%= post.username %></h3>
+                <h4 class="content"><%= post.content %></h4>
+                <a href="/posts/<%= post.id %>" class="button">See Post</a>
+                <a href="/posts/<%= post.id %>/edit" class="button">Edit</a>
+                <form method="POST" action="/posts/<%= post.id %>/delete" class="inline-form">
+                    <button type="submit" class="button">Delete</button>
+                </form>
+                
+            </div>
+        <% } %>
+        <a href="/posts/new" class="button">Create New Post</a>
+    </div>
+</body>
+</html>

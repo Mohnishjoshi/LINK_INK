@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit Post</h1>
+
+    <form method="POST" action="/posts/<%= post.id %>">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="<%= post.username %>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea name="content" id="content" required><%= post.content %></textarea>
+        </div>
+
+        <button type="submit" class="button">Update Post</button>
+    </form>
+
+    <br>
+    <a href="/posts/<%= post.id %>" class="button">Back to Post</a>
+</body>
+</html>

@@ -9,7 +9,7 @@ const PORT = 8080;
 let posts = [
   { id: uuidv4(), username: "mohnish", content: "I love drawing" },
   { id: uuidv4(), username: "pulkit", content: "I love gym" },
-  { id: uuidv4(), username: "neeraj", content: "I love pinkiiii" }
+  { id: uuidv4(), username: "neeraj", content: "I lam coding enthusiast " }
 ];
 
 // Middleware
